@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx hardhat build",
+    "compile": "npx hardhat compile",
+    "compile:clean": "npx hardhat clean && npx hardhat compile",
+    "test": "npx hardhat test"
   },
   "repository": {
     "type": "git",
@@ -20,5 +23,10 @@
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^1.0.2",
     "hardhat": "^2.10.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.7.3",
+    "keccak256": "^1.0.6",
+    "merkletreejs": "^0.2.32"
   }
 }
