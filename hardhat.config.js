@@ -1,7 +1,10 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config({ path: ".env" });
+require("@nomiclabs/hardhat-ethers");
+require("@openzeppelin/hardhat-upgrades");
+require("@nomiclabs/hardhat-etherscan");
 
-const ALCHEMY_API_KEY_URL = process.env.ALCHEMY_API_KEY_URL;
+const ALCHEMY_API_KEY_URL = process.env.ALCHEMY_API_KEY_URL; // for polygon mainnet
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
