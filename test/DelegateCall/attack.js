@@ -16,7 +16,9 @@ describe("Delegate call Attack", function () {
     console.log("Good Contract's Address:", _goodContract.address);
 
     // Deploy the Attack contract
-    const attackContract = await ethers.getContractFactory("Attack");
+    const attackContract = await ethers.getContractFactory(
+      "contracts/DelegateCall/Attack.sol:Attack"
+    );
     const _attackContract = await attackContract.deploy(_goodContract.address);
     await _attackContract.deployed();
     console.log("Attack Contract's Address", _attackContract.address);
