@@ -4,7 +4,7 @@ const { ethers } = require("hardhat");
 describe("Delegate call Attack", function () {
   it("Should change the owner of the Good contract", async function () {
     // Deploy the helper contract
-    const helperContract = await ethers.getContractFactory("Helper");
+    const helperContract = await ethers.getContractFactory("contracts/DelegateCall/Helper.sol:Helper");
     const _helperContract = await helperContract.deploy();
     await _helperContract.deployed();
     console.log("Helper Contract's Address:", _helperContract.address);

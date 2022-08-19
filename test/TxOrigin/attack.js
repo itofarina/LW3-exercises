@@ -6,7 +6,7 @@ const { ethers } = require("hardhat");
 When the user calls attack function with addr1, tx.origin is set to addr1. attack function further calls setOwner function of Good.sol which first checks if tx.origin is indeed the owner which is true because the original transaction was indeed called by addr1. After verifying the owner, it sets the owner to Attack.sol
 And thus attacker is successfully able to change the owner of Good.sol 🤯
  */
-describe("Attack", function () {
+describe("tx.origin Attack", function () {
   it("Attack.sol will be able to change the owner of Good.sol", async function () {
     // Get one address
     const [_, addr1] = await ethers.getSigners();
