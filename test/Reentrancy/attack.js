@@ -3,7 +3,7 @@ const { BigNumber } = require("ethers");
 const { parseEther } = require("ethers/lib/utils");
 const { ethers } = require("hardhat");
 
-describe("Attack", function () {
+describe("Reentrancy Attack", function () {
   it("Should empty the balance of the good contract", async function () {
     // Deploy the good contract
     const goodContractFactory = await ethers.getContractFactory("GoodContract");

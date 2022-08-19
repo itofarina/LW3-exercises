@@ -1,7 +1,7 @@
 const { ethers } = require("hardhat");
 const { expect } = require("chai");
 
-describe("Attack", function () {
+describe("Private Data Attack", function () {
   it("Should be able to read the private variables password and username", async function () {
     // Deploy the login contract
     const loginFactory = await ethers.getContractFactory("Login");
